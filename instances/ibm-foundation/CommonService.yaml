@@ -1,7 +1,7 @@
- apiVersion: operator.ibm.com/v3
-  kind: CommonService
-  metadata:
-    name: common-service
-    namespace: ibm-common-services
-  spec:
-    size: small
+apiVersion: operator.ibm.com/v3
+kind: CommonService
+metadata:
+  name: common-service
+  namespace: ibm-common-services
+spec:
+  size: small
