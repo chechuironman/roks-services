@@ -3,7 +3,7 @@
 # Declare variables to be passed into your templates.
 cp4data-instance:
   cp4data:
-    storageClass: :
+    storageClass: 
 
 
 
