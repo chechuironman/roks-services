@@ -2,9 +2,9 @@ apiVersion: v2
 name: cp4data-instance
 description: Deployment of Cloud Pak for Data instance
 type: application
-version: 0.1.2
+version: 0.1.3
 appVersion: "1.0"
 dependencies:
   - name: cp4data-instance
-    version: 0.1.2
+    version: 0.1.3
     repository: https://chechuironman.github.io/helm-repo/
