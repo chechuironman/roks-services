@@ -1,0 +1,23 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: quickstart
+spec:
+  version: 9.2.0.0-r1
+  license:
+    accept: true
+    license: L-APIG-BMJJBM
+  web:
+    enabled: true
+  queueManager:
+    name: "QUICKSTART"
+    storage:
+      queueManager:
+        type: ephemeral
+  template:
+    pod:
+      containers:
+       - name: qmgr
+         env:
+         - name: MQSNOAUT
+           value: "yes"
