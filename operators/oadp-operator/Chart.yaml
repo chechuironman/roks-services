@@ -1,0 +1,12 @@
+apiVersion: v2
+name: oadp-operator
+description: Deployment of OADP Operator
+type: application
+version: 0.1.0
+appVersion: "1.0"
+dependencies:
+  - name: oadp-operator
+    version: 0.1.0
+    repository: https://chechuironman.github.io/helm-repo/
+
+

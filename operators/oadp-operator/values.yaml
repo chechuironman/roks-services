@@ -1,0 +1,15 @@
+odf-operator:
+  odf:
+    sizeOSD: 
+    storageClass: 
+    worker_ip_1: 
+    worker_ip_2:
+    worker_ip_3:
+    billingType:
+    cpaks_enable:
+    storage_enable:
+    foundational_services_enable:
+    worker_enable:
+
+
+    
