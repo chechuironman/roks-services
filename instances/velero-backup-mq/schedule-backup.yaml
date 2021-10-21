@@ -1,0 +1,25 @@
+apiVersion: velero.io/v1
+kind: Schedule
+metadata:
+  name: schedule-mq-restic
+  namespace: openshift-adp
+spec:
+  schedule: 0 */1 * * *
+  template:
+    defaultVolumesToRestic: true
+    excludedResources:
+      - steatefulsets
+      - queuemanagers
+      - clients
+    includeClusterResources: true
+    includedNamespaces:
+      - cloudpak
+    includedResources:
+      - persistentvolumes
+      - persistentvolumeclaims
+      - pods
+      - serviceaccounts
+    labelSelector:
+      matchLabels:
+        app.kubernetes.io/instance: chechu-queue-1
+    ttl: 2h0m0s

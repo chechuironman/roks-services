@@ -1,0 +1,76 @@
+apiVersion: mq.ibm.com/v1beta1
+kind: QueueManager
+metadata:
+  name: chechu-queue-1
+  namespace: cloudpak
+spec:
+  license:
+    accept: true
+    license: L-RJON-BUVMQX
+    metric: VirtualProcessorCore
+    use: NonProduction
+  queueManager:
+    availability:
+      type: MultiInstance
+    debug: false
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 1
+      initialDelaySeconds: 90
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    logFormat: Basic
+    metrics:
+      enabled: true
+    name: chechuqueue
+    readinessProbe:
+      failureThreshold: 1
+      initialDelaySeconds: 10
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 3
+    resources:
+      limits:
+        cpu: "1"
+        memory: 1Gi
+      requests:
+        cpu: "1"
+        memory: 1Gi
+    route:
+      enabled: true
+    storage:
+      defaultClass: ocs-storagecluster-cephfs
+      persistedData:
+        class: ocs-storagecluster-cephfs
+        enabled: true
+        size: 5Gi
+        type: persistent-claim
+      queueManager:
+        class: ocs-storagecluster-cephfs
+        size: 20Gi
+        type: persistent-claim
+      recoveryLogs:
+        class: ocs-storagecluster-cephfs
+        enabled: true
+        size: 5Gi
+        type: persistent-claim
+  securityContext:
+    initVolumeAsRoot: false
+  template:
+    pod:
+      containers:
+      - env:
+        - name: MQSNOAUT
+          value: "yes"
+        name: qmgr
+        resources: {}
+  terminationGracePeriodSeconds: 30
+  tracing:
+    agent: {}
+    collector: {}
+    enabled: false
+    namespace: ""
+  version: 9.2.1.0-r1
+  web:
+    enabled: true
