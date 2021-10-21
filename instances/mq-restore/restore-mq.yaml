@@ -4,7 +4,7 @@ metadata:
   name: restore-mq-test-gitops
   namespace: openshift-adp
 spec:
-  backupName: backup-mq-8
+  backupName: backup-mq-11
   excludedResources:
     - imagestreams
     - images
