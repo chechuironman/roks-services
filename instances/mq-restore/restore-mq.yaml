@@ -17,12 +17,12 @@ spec:
     - restores.velero.io
     - resticrepositories.velero.io
     - queuemanagers
+    - serviceaccounts
+    - pods
   includeClusterResources: true
   includedNamespaces:
     - cloudpak
   includedResources:
-    - serviceaccounts
-    - pods
     - persistentvolumes
     - persistentvolumeclaims
   restorePVs: true
