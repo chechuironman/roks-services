@@ -1,4 +1,4 @@
-mq_instance:
+mq-instance:
   mq_instance:
     name: 
     storage_class: 
