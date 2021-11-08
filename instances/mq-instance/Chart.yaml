@@ -2,11 +2,11 @@ apiVersion: v2
 name: mq-instance
 description: Deployment of MQ instance
 type: application
-version: 0.1.3
+version: 0.1.4
 appVersion: "1.0"
 dependencies:
   - name: mq-instance
-    version: 0.1.3
+    version: 0.1.4
     repository: https://chechuironman.github.io/helm-repo/
 
 
