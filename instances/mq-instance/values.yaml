@@ -1,7 +1,7 @@
-mq-instance:
-  mq-instance:
+mq_instance:
+  mq_instance:
     name: 
-    storage-class: 
+    storage_class: 
     namespace:  
 
 
