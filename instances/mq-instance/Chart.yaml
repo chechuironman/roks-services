@@ -3,7 +3,7 @@ name: mq-instance
 description: Deployment of MQ instance
 type: application
 version: 0.1.4
-appVersion: "1.0"
+appVersion: "0.1.4"
 dependencies:
   - name: mq-instance
     version: 0.1.4
