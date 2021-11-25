@@ -1,8 +1,12 @@
 mq-instance:
   mq_instance:
-    name: 
+    name:
+    namespace:
     storage_class: 
-    namespace:  
+    configmap: 
+    secret:
+    version:
+    queuename:
 
 
     
